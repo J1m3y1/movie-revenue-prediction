@@ -1,0 +1,2 @@
+Python Libaries: pip install pandas numpy scikit-learn matplotlib
+DataBase: https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies?resource=download
