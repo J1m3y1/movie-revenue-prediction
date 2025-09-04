@@ -22,16 +22,6 @@ y = df['revenue']
 features = ['vote_average', 'vote_count', 'runtime', 'budget', 'popularity']
 X = df[features].copy()
 
-#Log Transforming Skewed Features
-X['budget_log'] = np.log1p(X['budget'])
-X['popularity_log'] = np.log1p(X['popularity'])
-X['vote_count_log'] = np.log1p(X['vote_count'])
-
-#Feature Engeneering
-X['vote_weighted'] = X['vote_average'] * X['vote_count_log']
-X['budget_per_runtime'] = X['budget_log'] * X['runtime']
-X['popularity_per_vote'] = X['popularity_log'] * X['vote_count_log']
-
 X = X.fillna(0)
 
 #Split data with 80% training and 20% testing
